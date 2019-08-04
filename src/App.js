@@ -1,7 +1,3 @@
-
-
-
-
 import React, { Component } from "react";
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -26,19 +22,20 @@ class App extends Component {
          <div>
          <Navigation />
         <Switch>
+       <Records/>
         <Route path="/" Component = { Home } exact/>
-        <Route path="/records" Component = { Records } />
-
-        <Route path="/appapi" Component = { Appapi } />
+        <Route path="/records" Component = { Records }  />
+        
+        <Route path="/appapi" Component = { Appapi } />   
+           
         <Route component={Error} />  
         </Switch>
-         </div>
+        <Appapi/>
+         </div>         
       </div>
+      
     </BrowserRouter>
     );   
  }
 }
 export default App;
-
-
-
